@@ -29,3 +29,16 @@ body {
   margin: 0;
   border-bottom: 1px solid #efe3e3;
 }
+
+.pull-right {
+  text-align: end;
+}
+
+.highlight {
+  color: red;
+}
+
+.product-ruler {
+  padding: 1rem 0.5rem;
+  border-bottom: 1px solid #f3eded;
+}
