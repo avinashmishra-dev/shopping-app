@@ -1,21 +1,21 @@
 .products {
-    width: 30%;
-    height: 100%;
-    background: white;
-    box-shadow: 2px 8px 16px #be9d9d;
-    padding: 0.5rem;
-    font-weight: 500;
+  width: 30%;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 8px 16px #be9d9d;
+  padding: 0.5rem;
+  font-weight: 500;
 }
 
 .products__label {
-    font-weight: 700;
-    font-size: 2rem;
-    margin: 0;
-    border-bottom: 1px solid #efe3e3;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  border-bottom: 1px solid #efe3e3;
 }
 
 @media only screen and (max-width: 600px) {
-    .products {
-      width: 100%;
-    }
+  .products {
+    width: 100%;
   }
+}

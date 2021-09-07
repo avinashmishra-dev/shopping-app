@@ -1,10 +1,15 @@
-import react from 'react';
-import classes from './button.module.css';
+import classes from "./button.module.css";
 
-const Button = ({onClickEvent, label})=>{
-    return (
-        <button onClick={onClickEvent} className={classes.btn}>{label || 'Click'}</button>
-    );
+const Button = ({ onClickEvent, label, disabled }) => {
+  return (
+    <button
+      onClick={onClickEvent}
+      className={[classes.btn, disabled ? classes.btn__disabled : ""].join(" ")}
+      disabled={disabled}
+    >
+      {label || "Click"}
+    </button>
+  );
 };
 
 export default Button;
