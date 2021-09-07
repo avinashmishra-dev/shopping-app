@@ -3,4 +3,14 @@
   width: 100vw;
   background-color: rgb(244, 246, 250);
   padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .mart {
+    flex-flow: column;
+    align-items: center;
+  }
 }

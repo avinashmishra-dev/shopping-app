@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Cart from "../../components/cart/cart";
 import ProductsList from "../../components/products-list/products-list";
 import classes from "./mart.module.css";
 
@@ -35,12 +36,22 @@ const Mart = () => {
       isDisabled: false,
     },
   ]);
+  const [cart, setCart] = useState({});
 
   const productManager = (action, id) => {
+    // updating products
     const foundIndex = products.findIndex((product) => product.id === id);
     const newProducts = [...products];
     newProducts[foundIndex] = { ...products[foundIndex], isDisabled: true };
     setProducts(newProducts);
+
+    // updating cart
+    const newCart = { ...cart };
+    newCart[id] = {
+      quantity: 1,
+      discount: 0,
+    };
+    setCart(newCart);
   };
 
   return (
@@ -49,7 +60,8 @@ const Mart = () => {
         products={products}
         label="Products"
         productManager={productManager}
-      ></ProductsList>
+      />
+      <Cart label="Basket" />
     </div>
   );
 };

@@ -1,10 +1,9 @@
-.products {
-  width: 30%;
+.cart {
+  width: calc(100% - 30% - 2rem);
 }
 
 @media only screen and (max-width: 600px) {
-  .products {
+  .cart {
     width: 100%;
-    margin-bottom: 1rem;
   }
 }
