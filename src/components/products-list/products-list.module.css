@@ -13,3 +13,9 @@
     margin: 0;
     border-bottom: 1px solid #efe3e3;
 }
+
+@media only screen and (max-width: 600px) {
+    .products {
+      width: 100%;
+    }
+  }
