@@ -61,7 +61,7 @@ const Mart = () => {
         label="Products"
         productManager={productManager}
       />
-      <Cart label="Basket" />
+      <Cart label="Basket" products={products} cart={cart} />
     </div>
   );
 };
