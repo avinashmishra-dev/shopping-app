@@ -1,7 +1,7 @@
 import QuantityManager from "../quantity-manager/quantity-manager";
 import classes from "./cart.module.css";
 
-const Cart = ({ products, cart, label }) => {
+const Cart = ({ products, cart, label, productQuantityHandler }) => {
   const cartBuilder = () => {
     const productsInCart = [];
     for (const productId in cart) {
@@ -15,6 +15,7 @@ const Cart = ({ products, cart, label }) => {
             key={productId}
             productMetaInfo={productInCartMetaInfo}
             productCartInfo={productInCart}
+            productQuantityHandler={productQuantityHandler}
           />
         );
       }

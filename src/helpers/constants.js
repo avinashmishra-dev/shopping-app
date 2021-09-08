@@ -1,7 +1,12 @@
 export const CURRENCIES = {
-    pound: '£'
-}
+  pound: "£",
+};
 
 export const PRODUCT_ACTIONS = {
-    add: 'ADD'
-}
+  add: "ADD",
+};
+
+export const QUANTITY_BTN_ACTIONS = {
+  add: "ADD",
+  sub: "SUB",
+};

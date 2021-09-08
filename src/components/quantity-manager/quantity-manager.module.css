@@ -1,4 +1,4 @@
-.product span {
-    width: 33.33%;
-    display: inline-block;   
+.product__info {
+  width: 33.33%;
+  display: inline-block;
 }

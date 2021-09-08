@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Cart from "../../components/cart/cart";
 import ProductsList from "../../components/products-list/products-list";
+import { QUANTITY_BTN_ACTIONS } from "../../helpers/constants";
 import classes from "./mart.module.css";
 
 const Mart = () => {
@@ -54,6 +55,17 @@ const Mart = () => {
     setCart(newCart);
   };
 
+  const productQuantityHandler = (productId, operation) => {
+    const newCart = {...cart};
+    newCart[productId] = {...cart[productId]};
+    if (operation === QUANTITY_BTN_ACTIONS.add) {
+      newCart[productId].quantity += 1;
+    } else if (operation === QUANTITY_BTN_ACTIONS.sub && newCart[productId].quantity > 0) {
+      newCart[productId].quantity -= 1;
+    }
+    setCart(newCart);
+  };
+
   return (
     <div className={classes.mart}>
       <ProductsList
@@ -61,7 +73,12 @@ const Mart = () => {
         label="Products"
         productManager={productManager}
       />
-      <Cart label="Basket" products={products} cart={cart} />
+      <Cart
+        label="Basket"
+        products={products}
+        cart={cart}
+        productQuantityHandler={productQuantityHandler}
+      />
     </div>
   );
 };
